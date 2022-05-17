@@ -1,0 +1,353 @@
+object CopyrightF: TCopyrightF
+  Left = 587
+  Height = 400
+  Top = 296
+  Width = 700
+  BorderStyle = bsToolWindow
+  Caption = 'Copyright'
+  ClientHeight = 400
+  ClientWidth = 700
+  Color = 7452927
+  DesignTimePPI = 120
+  FormStyle = fsStayOnTop
+  OnActivate = DisableMovement
+  OnChangeBounds = DisableMovement
+  LCLVersion = '1.8.4.0'
+  object TopPanel: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 100
+    Top = 0
+    Width = 700
+    Anchors = [akTop, akLeft, akRight]
+    BevelOuter = bvNone
+    ClientHeight = 100
+    ClientWidth = 700
+    Color = 16512
+    ParentColor = False
+    TabOrder = 0
+    object CopyrightDisclaimerA: TLabel
+      AnchorSideLeft.Control = TopPanel
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = TopPanel
+      AnchorSideTop.Side = asrCenter
+      Left = 172
+      Height = 37
+      Top = 32
+      Width = 357
+      Anchors = [akLeft]
+      Caption = 'COPYRIGHT DISCLAIMER'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -33
+      Font.Name = 'Britannic Bold'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object CopyrightDisclaimerB: TLabel
+      AnchorSideTop.Control = CopyrightDisclaimerA
+      AnchorSideTop.Side = asrBottom
+      Left = 253
+      Height = 20
+      Top = 69
+      Width = 231
+      Anchors = [akTop]
+      Caption = '(I do not own any of the following)'
+      ParentColor = False
+    end
+    object Images: TToggleBox
+      AnchorSideTop.Control = Soundtrack
+      AnchorSideBottom.Control = Soundtrack
+      AnchorSideBottom.Side = asrBottom
+      Left = 536
+      Height = 50
+      Top = 24
+      Width = 150
+      Anchors = [akTop, akBottom]
+      Caption = 'Images'
+      Font.CharSet = EASTEUROPE_CHARSET
+      Font.Height = -27
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = ImagesClick
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Soundtrack: TToggleBox
+      Left = 14
+      Height = 50
+      Top = 24
+      Width = 150
+      Caption = 'Soundtrack'
+      Checked = True
+      Font.CharSet = EASTEUROPE_CHARSET
+      Font.Height = -27
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = SoundtrackClick
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 0
+    end
+  end
+  object ImagePage: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 175
+    Height = 60
+    Top = 304
+    Width = 350
+    Anchors = [akLeft]
+    BorderSpacing.Bottom = 20
+    Caption = 'Pieces'
+    Color = clSilver
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -33
+    Font.Name = 'Britannic Bold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+  end
+  object Copyright6B: TLabel
+    AnchorSideLeft.Control = Copyright1B
+    AnchorSideTop.Control = Copyright6A
+    AnchorSideTop.Side = asrCenter
+    Left = 175
+    Height = 1
+    Top = 245
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object ArrowRight: TArrow
+    AnchorSideTop.Control = ImagePage
+    Left = 544
+    Height = 60
+    Top = 304
+    Width = 60
+    Anchors = [akTop]
+    ArrowType = atRight
+    Constraints.MinHeight = 10
+    Constraints.MinWidth = 10
+    OnClick = ArrowRightClick
+    Visible = False
+  end
+  object ArrowLeft: TArrow
+    AnchorSideTop.Control = ImagePage
+    Left = 104
+    Height = 60
+    Top = 304
+    Width = 60
+    Anchors = [akTop]
+    Constraints.MinHeight = 10
+    Constraints.MinWidth = 10
+    OnClick = ArrowLeftClick
+    Visible = False
+  end
+  object Copyright1A: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = TopPanel
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 27
+    Top = 110
+    Width = 226
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 10
+    Caption = 'Misconception by Myuuji'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -23
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright2A: TLabel
+    AnchorSideLeft.Control = Copyright1A
+    AnchorSideTop.Control = Copyright1A
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 27
+    Top = 137
+    Width = 205
+    Caption = 'Prey Reprise by Myuuji'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -23
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright3A: TLabel
+    AnchorSideLeft.Control = Copyright1A
+    AnchorSideTop.Control = Copyright2A
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 27
+    Top = 164
+    Width = 266
+    Caption = 'Round That Corner by Myuuji'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright4A: TLabel
+    AnchorSideLeft.Control = Copyright1A
+    AnchorSideTop.Control = Copyright3A
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 27
+    Top = 191
+    Width = 221
+    Caption = 'Scent of Night by Myuuji'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -23
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright5A: TLabel
+    AnchorSideLeft.Control = Copyright1A
+    AnchorSideTop.Control = Copyright4A
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 27
+    Top = 218
+    Width = 214
+    Caption = 'The Forsaken by Myuuji'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -23
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright6A: TLabel
+    AnchorSideLeft.Control = Copyright1A
+    AnchorSideTop.Control = Copyright5A
+    AnchorSideTop.Side = asrBottom
+    Left = 10
+    Height = 1
+    Top = 245
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -23
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright1B: TLabel
+    AnchorSideLeft.Control = ImagePage
+    AnchorSideTop.Control = Copyright1A
+    AnchorSideTop.Side = asrCenter
+    Left = 175
+    Height = 1
+    Top = 123
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright2B: TLabel
+    AnchorSideLeft.Control = Copyright1B
+    AnchorSideTop.Control = Copyright2A
+    AnchorSideTop.Side = asrCenter
+    Left = 175
+    Height = 1
+    Top = 150
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright3B: TLabel
+    AnchorSideLeft.Control = Copyright1B
+    AnchorSideTop.Control = Copyright3A
+    AnchorSideTop.Side = asrCenter
+    Left = 175
+    Height = 24
+    Top = 165
+    Width = 155
+    Caption = '=> thedarkpiano.com'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright4B: TLabel
+    AnchorSideLeft.Control = Copyright1B
+    AnchorSideTop.Control = Copyright4A
+    AnchorSideTop.Side = asrCenter
+    Left = 175
+    Height = 1
+    Top = 204
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Copyright5B: TLabel
+    AnchorSideLeft.Control = Copyright1B
+    AnchorSideTop.Control = Copyright5A
+    AnchorSideTop.Side = asrCenter
+    Left = 175
+    Height = 1
+    Top = 231
+    Width = 1
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -20
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end
